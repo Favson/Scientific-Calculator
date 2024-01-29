@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="calculator" class="shadow-sm">
+    <div id="timeUpdate" class="shadow-sm"></div><br>
+    <!-- <div id="timeUpdateOff" style="display: none;"></div><br> -->
+    <div id="display" class="p-2" style="border:2px solid black; background-color: rgb(66, 72, 66); color:white">0</div>
+    <div id="display2" class="p-4" style="border:2px solid black; display:none;background-color:black"></div>
+    <div>
+        <div>
+            <button onclick="togglePowerOn()" class="me-5 bg-success border-0 text-light">On</button>
+            <button onclick="togglePowerOFF()" class="ms-5 bg-danger text-warning border-0">Off</button>
+        </div>
+        <div>
+            <button onclick="appendDigit('7')" class="border-0 shadow-lg">7</button>
+            <button onclick="appendDigit('8')" class="border-0 shadow-lg">8</button>
+            <button onclick="appendDigit('9')" class="border-0 shadow-lg">9</button>
+            <button onclick="operate('+')" class="border-0 shadow-lg">+</button>
+        </div>
+        <div>
+            <button onclick="appendDigit('4')" class="border-0 shadow-lg">4</button>
+            <button onclick="appendDigit('5')" class="border-0 shadow-lg">5</button>
+            <button onclick="appendDigit('6')" class="border-0 shadow-lg">6</button>
+            <button onclick="operate('-')" class="border-0 shadow-lg">-</button>
+        </div>
+        <div>
+            <button onclick="appendDigit('1')" class="border-0 shadow-lg">1</button>
+            <button onclick="appendDigit('2')" class="border-0 shadow-lg">2</button>
+            <button onclick="appendDigit('3')" class="border-0 shadow-lg">3</button>
+            <button onclick="operate('*')" class="border-0 shadow-lg">X</button>
+        </div>
+        <div>
+            <button onclick="appendDigit('0')" class="border-0 shadow-lg">0</button>
+            <button onclick="operate('.')" class="border-0 shadow-lg">.</button>
+            <button onclick="operate('/')" class="border-0 shadow-lg">/</button>
+            <button onclick="calculate()" class="border-0 shadow-lg">=</button>
+        </div>
+        <div>
+            <button onclick="operate('sqrt')" class="border-0 shadow-lg">√</button>
+            <button onclick="clearDisplay()" class="border-0 shadow-lg">C</button>
+            <button onclick="clearDisplay()" class="border-0 shadow-lg">C</button>
+            <!-- <button onclick="clearDisplay()" class="border-0 shadow-lg">C</button> -->
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
